@@ -28,6 +28,11 @@
     background-image: url(../../img/about-hero-bg.png);
   }
 
+  &--positions {
+    background-image: url(../../img/positions-hero-bg.png);
+    background-position: right 51px bottom;
+  }
+
   &__breadcrumbs {
     margin-bottom: 39px;
   }
