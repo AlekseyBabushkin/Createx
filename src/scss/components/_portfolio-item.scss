@@ -9,6 +9,7 @@
     0 12px 10px -6px rgba(154, 156, 165, 0.08),
     0 4px 4px -4px rgba(30, 33, 44, 0.05);
   background: var(--color-light);
+  transition: transform 0.3s ease-in-out;
 
   &__content {
     @include flex-column-center;
@@ -34,7 +35,7 @@
   }
 
   &__btn {
-    display: none;
+    margin-bottom: -70px;
     margin-top: 24px;
     font-weight: 700;
     font-size: 14px;
@@ -44,5 +45,18 @@
     color: var(--color-primary);
     border: 1px solid currentColor;
     border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    will-change: margin;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-item__btn {
+      margin-bottom: 0;
+    }
   }
 }

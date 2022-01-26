@@ -4,16 +4,39 @@
 
   &__list {
     column-gap: 30px;
-    row-gap: 0;
-    margin-bottom: 20px;
+    row-gap: 60px;
+    margin-bottom: 80px;
   }
 
   &__item {
     grid-column: 3 span;
+
+    &:hover {
+      .team__socials {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
-  &__image {
+  &__top {
+    position: relative;
     margin-bottom: 12px;
+    font-size: 0;
+  }
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @include flex-all-center;
+    padding: 20px 10px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: rgba(#ff5a30, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
   }
 
   &__link {
@@ -25,7 +48,12 @@
       display: block;
       width: 20px;
       height: 20px;
+      fill: var(--color-light);
       object-fit: cover;
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
     }
   }
 
@@ -50,12 +78,26 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
 
     a {
       font-size: 18px;
       line-height: 150%;
       text-decoration-line: underline;
       color: var(--color-primary);
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-active);
+      }
+
+      &:active {
+        color: var(--color-active);
+      }
     }
   }
 }

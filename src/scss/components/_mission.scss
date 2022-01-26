@@ -6,7 +6,7 @@
     --mission-gap: 94px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--mission-gap)*2);
+    gap: calc(var(--mission - gap)*2);
   }
 
   &__item {
