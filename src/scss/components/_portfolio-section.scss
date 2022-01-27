@@ -7,12 +7,29 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 48px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__title {
     margin: 0;
     padding-bottom: 15px;
     max-width: 710px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 55px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      padding-bottom: 0;
+      font-size: 28px;
+      line-height: 40px;
+      max-width: none;
+    }
   }
 
   &__learn {
@@ -21,6 +38,10 @@
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
   &__items {
@@ -38,6 +59,10 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 

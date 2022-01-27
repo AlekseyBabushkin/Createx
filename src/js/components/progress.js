@@ -1,18 +1,3 @@
-//const circle = document.querySelector('.progress');
-
-//const porgressAnimation = () => {
-//  let percentageProgress = Math.floor(85);
-
-//  let radius = circle.getAttribute('r');
-//  console.log(radius);
-//  let circleLength = 2 * Math.PI * radius;
-//  console.log(circleLength);
-//  circle.setAttribute('stroke-dasharray', circleLength);
-//  circle.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
-//}
-
-//porgressAnimation();
-
 const circles = document.querySelectorAll('.facts-element__circle');
 
 circles.forEach(el => {
@@ -40,4 +25,4 @@ circles.forEach(el => {
     progress.setAttribute('stroke-dasharray', circleLength);
     progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
   }
-})
+});

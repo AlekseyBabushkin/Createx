@@ -3,7 +3,7 @@ const relatedSlider = document.querySelector('.related-projects__items');
 
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     on: {
@@ -20,6 +20,14 @@ if (portSlider) {
     navigation: {
       nextEl: '.portfolio-section__next',
       prevEl: '.portfolio-section__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
     },
   });
 

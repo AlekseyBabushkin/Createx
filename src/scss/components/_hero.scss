@@ -11,6 +11,10 @@
     transform: translateY(-50%);
     z-index: 10;
     background-color: var(--color-light);
+
+    @include middledesk {
+      display: none;
+    }
   }
 
   &__prev {
@@ -20,6 +24,10 @@
     transform: translateY(-50%);
     z-index: 10;
     background-color: var(--color-light);
+
+    @include middledesk {
+      display: none;
+    }
   }
 
   &__pag {
@@ -52,6 +60,23 @@
         display: none;
       }
     }
+
+    @include middledesk {
+      left: 3% !important;
+    }
+
+    @include minidesk {
+      left: 15px !important;
+    }
+
+    @include minitablet {
+      bottom: 50px !important;
+      width: calc(100% - 30px) !important;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__bar {
@@ -79,6 +104,11 @@
     .btn {
       &:not(:last-child) {
         margin-right: 17px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -111,4 +141,13 @@
   background-color: var(--color-gray);
   padding-top: 221px;
   padding-bottom: 352px;
+
+  @include minitablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @include mobile {
+    padding: 100px 0;
+  }
 }

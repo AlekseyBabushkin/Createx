@@ -6,12 +6,28 @@
   &__list {
     margin-bottom: 80px;
   }
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .services-list {
 
   &__item {
     grid-column: 3 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -110,6 +126,10 @@
     text-align: center;
     color: var(--color-ebony);
     transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &:hover {
