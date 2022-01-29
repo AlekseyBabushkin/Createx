@@ -2,6 +2,13 @@
   padding: 120px 0;
   background-color: var(--color-light);
 
+  &__container {
+
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__img {
     grid-column: 7 span;
   }
@@ -10,6 +17,11 @@
     grid-column: 5 span;
     padding-left: 75px;
     padding-top: 5px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-top: 30px;
+    }
   }
 
   &__title {
@@ -99,5 +111,13 @@
     &::after {
       opacity: 0;
     }
+  }
+
+  @include minitablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

@@ -27,6 +27,10 @@
     0 12px 10px -6px rgba(154, 156, 165, 0.04),
     0 4px 4px -4px rgba(30, 33, 44, 0.03);
   width: 100%;
+
+  @include minitablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -80,6 +84,11 @@
         .table__col {
           padding-top: 30px;
           padding-bottom: 30px;
+
+          @include mobile {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
         }
       }
     }
@@ -107,11 +116,19 @@
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
       }
+
+      @include tablet {
+        padding: 0 10px;
+      }
     }
 
     &:first-child {
       text-align: left;
       padding-left: 24px;
+    }
+
+    @include mobile {
+      padding: 10px 0;
     }
   }
 
@@ -132,5 +149,13 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-gray);
+  }
+
+  @include minitablet {
+    width: 1200px;
+  }
+
+  @include mobile {
+    width: 900px;
   }
 }

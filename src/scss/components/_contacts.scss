@@ -5,13 +5,25 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__image {
     margin-right: 20px;
     flex-shrink: 0;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .form-contacts {
@@ -22,6 +34,10 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 27px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -30,6 +46,14 @@
     &--big {
       width: 100%;
     }
+
+    @include mobile {
+      width: 100%;
+
+      &:not(:last-childe) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__bottom {
@@ -37,6 +61,11 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 39px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start
+    }
   }
 
   &__checkbox {
@@ -54,6 +83,10 @@
       &::after {
         top: 4px;
       }
+    }
+
+    @include mobile {
+      padding: 40px 0;
     }
   }
 
@@ -149,6 +182,10 @@
 
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+
+  @include tablet {
+    width: 100%;
   }
 }
 

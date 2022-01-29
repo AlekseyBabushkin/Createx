@@ -21,6 +21,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--mission-gap)*2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -44,6 +56,10 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include minitablet {
+        display: none;
+      }
     }
 
     &--terms {
@@ -56,6 +72,12 @@
 
     &--control {
       background-image: url(../../img/control.svg);
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -82,5 +104,9 @@
   &__btn {
     width: 390px;
     transform: translateY(71px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

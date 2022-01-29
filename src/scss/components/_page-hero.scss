@@ -50,6 +50,20 @@
       letter-spacing: 1px;
       text-transform: initial;
       margin-bottom: 50px;
+
+      @include minitablet {
+        font-size: 45px;
+        line-height: 58px;
+      }
+
+      @include mobile {
+        font-size: 35px;
+        line-height: 45px;
+      }
+    }
+
+    @include minidesk {
+      margin-bottom: 30px;
     }
   }
 
@@ -112,6 +126,10 @@
       right: -14px;
       height: 16px;
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__social {
@@ -123,6 +141,11 @@
 
   &__bottom {
     @include flex-all-sb;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__descr {

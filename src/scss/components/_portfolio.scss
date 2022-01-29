@@ -14,6 +14,16 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+
+    @include minitablet {
+      margin-bottom: 20px;
+      width: calc((100% - (20px * 2)) / 3);
+    }
+
+    @include mobile {
+      margin-right: 0 !important;
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -62,6 +72,13 @@
     color: #9a9ca5;
     transition: color 0.3s ease-in-out;
     pointer-events: none;
+  }
+
+  @include minitablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none;
+    margin-top: 30px;
   }
 }
 

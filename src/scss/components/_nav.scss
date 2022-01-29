@@ -1,15 +1,25 @@
 .nav {
   &__list {
     @include flex-v-center;
+
+    @include tablet {
+      margin-bottom: 40px;
+      display: block;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
     }
   }
 
-  &__list {
+  &__link {
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;

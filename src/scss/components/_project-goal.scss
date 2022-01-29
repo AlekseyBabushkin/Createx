@@ -2,6 +2,12 @@
   padding-top: 30px;
   padding-bottom: 118px;
 
+  .grid {
+    @include minitablet {
+      display: block;
+    }
+  }
+
   &__left {
     padding-top: 22px;
     grid-column: 6 span;
@@ -26,6 +32,14 @@
     grid-column: 6 span;
     display: flex;
     justify-content: flex-end;
+
+    @include minitablet {
+      justify-content: flex-start;
+    }
+  }
+
+  @include minitablet {
+    padding-bottom: 50px;
   }
 }
 
@@ -51,6 +65,7 @@
   }
 
   &__category {
+    flex-shrink: 0;
     width: 130px;
     font-weight: 700;
     font-size: 16px;
@@ -63,5 +78,14 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include minitablet {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  @include mobile {
+    padding: 10px 0;
   }
 }

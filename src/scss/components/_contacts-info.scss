@@ -9,6 +9,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--contacts - gap)*2);
+
+    @include minidesk {
+      --contacts-gap: 40px;
+    }
+
+    @include minitablet {
+      display: block;
+    }
   }
 
   &__soc {
@@ -48,6 +56,10 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+      }
+
+      @include tablet {
+        margin-bottom: 30px;
       }
     }
   }
@@ -104,6 +116,10 @@
 
   &__value {
     color: var(--color-ebony);
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 
